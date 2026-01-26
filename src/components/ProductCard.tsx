@@ -4,10 +4,11 @@ interface ProductCardProps {
   name: string;
   price: string;
   size?: "small" | "medium" | "large";
+  image?: string;
   index: number;
 }
 
-const ProductCard = ({ name, price, size = "medium", index }: ProductCardProps) => {
+const ProductCard = ({ name, price, size = "medium", image, index }: ProductCardProps) => {
   const sizeClasses = {
     small: "aspect-square",
     medium: "aspect-[4/5]",
@@ -24,13 +25,23 @@ const ProductCard = ({ name, price, size = "medium", index }: ProductCardProps) 
       className="product-card group"
     >
       <div className={`${sizeClasses[size]} bg-muted mb-6 flex items-center justify-center relative overflow-hidden`}>
-        {/* Water bottle silhouette */}
-        <motion.div
-          initial={{ scale: 0.9 }}
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.4 }}
-          className="w-1/2 h-3/4 bg-gradient-to-b from-foreground/5 to-foreground/10 rounded-t-full"
-        />
+        {image ? (
+          <motion.img
+            src={image}
+            alt={name}
+            initial={{ scale: 0.9 }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.4 }}
+            className="w-auto h-4/5 object-contain"
+          />
+        ) : (
+          <motion.div
+            initial={{ scale: 0.9 }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.4 }}
+            className="w-1/2 h-3/4 bg-gradient-to-b from-foreground/5 to-foreground/10 rounded-t-full"
+          />
+        )}
       </div>
       <div className="flex justify-between items-end">
         <p className="text-sm font-light text-foreground">{name}</p>
