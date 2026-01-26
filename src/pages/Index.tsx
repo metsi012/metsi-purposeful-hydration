@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import FloatingNav from "@/components/FloatingNav";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import Marquee from "@/components/Marquee";
@@ -28,9 +30,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section - Light Mode */}
+      {/* Hero Section */}
       <section className="min-h-screen bg-secondary relative overflow-hidden">
         <Navigation />
+        <FloatingNav />
 
         <div className="container-premium min-h-screen flex items-center pt-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
@@ -39,7 +42,7 @@ const Index = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative aspect-[4/5] bg-background flex items-center justify-center"
+              className="relative aspect-[4/5] bg-background rounded-2xl flex items-center justify-center"
             >
               {/* Featured bottle image */}
               <motion.img
@@ -47,8 +50,12 @@ const Index = () => {
                 alt="METSI 012 Water Bottle"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="w-auto h-3/4 object-contain"
+                className="w-auto h-3/4 object-contain drop-shadow-2xl"
               />
+              
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-xl" />
+              <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
             </motion.div>
 
             {/* Right - Content */}
@@ -57,7 +64,7 @@ const Index = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-4 block"
+                className="text-sm uppercase tracking-[0.3em] text-primary mb-4 block font-medium"
               >
                 Premium Water
               </motion.span>
@@ -68,9 +75,9 @@ const Index = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-5xl md:text-7xl font-bold mb-6 leading-[0.95] tracking-tight text-foreground"
               >
-                METSI
+                Metsi
                 <br />
-                012
+                <span className="text-primary">012</span>
               </motion.h1>
 
               <motion.p
@@ -86,13 +93,20 @@ const Index = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="flex gap-4"
+                className="flex flex-wrap gap-4"
               >
-                <Link to="/order" className="btn-primary">
+                <Link 
+                  to="/order" 
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-medium hover:bg-primary/90 transition-colors"
+                >
                   Order Now
+                  <ArrowRight size={18} />
                 </Link>
-                <Link to="/contact" className="btn-outline">
-                  Contact Us
+                <Link 
+                  to="/products" 
+                  className="inline-flex items-center gap-2 border-2 border-foreground text-foreground px-8 py-4 rounded-full font-medium hover:bg-foreground hover:text-background transition-colors"
+                >
+                  View Products
                 </Link>
               </motion.div>
 
@@ -104,11 +118,11 @@ const Index = () => {
                 className="mt-16 pt-8 border-t border-border grid grid-cols-2 gap-8"
               >
                 <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">Location</p>
+                  <p className="text-xs uppercase tracking-[0.2em] text-primary mb-2 font-medium">Location</p>
                   <p className="text-sm text-foreground">Pretoria, South Africa</p>
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">Type</p>
+                  <p className="text-xs uppercase tracking-[0.2em] text-primary mb-2 font-medium">Type</p>
                   <p className="text-sm text-foreground">Still & Sparkling</p>
                 </div>
               </motion.div>
@@ -131,7 +145,7 @@ const Index = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-4 block"
+                className="text-sm uppercase tracking-[0.3em] text-primary mb-4 block font-medium"
               >
                 Our Products
               </motion.span>
@@ -152,8 +166,12 @@ const Index = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <Link to="/order" className="btn-outline hidden md:inline-block">
+              <Link 
+                to="/products" 
+                className="hidden md:inline-flex items-center gap-2 text-primary font-medium hover:underline"
+              >
                 View All
+                <ArrowRight size={16} />
               </Link>
             </motion.div>
           </div>
@@ -163,7 +181,7 @@ const Index = () => {
             <p className="bg-text text-center whitespace-nowrap">FEATURED</p>
           </div>
 
-          {/* Product Grid - Scattered Layout */}
+          {/* Product Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 relative z-10">
             {products.slice(0, 3).map((product, index) => (
               <ProductCard
@@ -177,9 +195,9 @@ const Index = () => {
             ))}
           </div>
 
-          {/* Second Row - Offset */}
+          {/* Second Row */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mt-8 relative z-10">
-            <div className="hidden md:block" /> {/* Spacer */}
+            <div className="hidden md:block" />
             {products.slice(3, 5).map((product, index) => (
               <ProductCard
                 key={product.name}
@@ -235,15 +253,15 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section - Light Mode */}
-      <AnimatedSection className="py-32 bg-secondary relative overflow-hidden">
+      {/* CTA Section */}
+      <AnimatedSection className="py-32 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="container-premium text-center relative z-10">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-8xl font-bold tracking-tighter mb-8 text-foreground"
+            className="text-5xl md:text-8xl font-bold tracking-tighter mb-8"
           >
             PURE WATER
           </motion.h2>
@@ -253,7 +271,7 @@ const Index = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-lg text-muted-foreground font-light mb-12 max-w-md mx-auto"
+            className="text-lg opacity-80 font-light mb-12 max-w-md mx-auto"
           >
             Straight from Pretoria, delivered to your door.
           </motion.p>
@@ -264,15 +282,19 @@ const Index = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <Link to="/order" className="btn-primary">
+            <Link 
+              to="/order" 
+              className="inline-flex items-center gap-2 bg-background text-foreground px-8 py-4 rounded-full font-medium hover:opacity-90 transition-opacity"
+            >
               Order Now
+              <ArrowRight size={18} />
             </Link>
           </motion.div>
         </div>
 
-        {/* Background decorative text */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-[0.03]">
-          <span className="text-[30vw] font-bold tracking-tighter text-foreground">M</span>
+        {/* Background decorative */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-10">
+          <span className="text-[30vw] font-bold tracking-tighter">M</span>
         </div>
       </AnimatedSection>
 

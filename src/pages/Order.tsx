@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import Navigation from "@/components/Navigation";
+import FloatingNav from "@/components/FloatingNav";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -115,16 +116,17 @@ const Order = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
+      <FloatingNav />
       <FloatingWhatsApp />
 
       {/* Hero */}
-      <section className="pt-32 pb-16">
+      <section className="pt-32 pb-16 bg-secondary">
         <div className="container-premium">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-4 block"
+            className="text-sm uppercase tracking-[0.3em] text-primary mb-4 block font-medium"
           >
             Place Your Order
           </motion.span>
