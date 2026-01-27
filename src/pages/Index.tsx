@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import Navigation from "@/components/Navigation";
 import FloatingNav from "@/components/FloatingNav";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -30,10 +29,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Sticky Floating Nav */}
+      <FloatingNav />
+
       {/* Hero Section */}
-      <section className="min-h-screen bg-secondary relative overflow-hidden">
-        <Navigation />
-        <FloatingNav />
+      <section className="min-h-screen bg-secondary relative overflow-hidden pt-20">
 
         <div className="container-premium min-h-screen flex items-center pt-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center w-full">

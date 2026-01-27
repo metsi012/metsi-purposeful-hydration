@@ -4,7 +4,6 @@ import { MessageCircle, Plus, Minus, ShoppingCart } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import Navigation from "@/components/Navigation";
 import FloatingNav from "@/components/FloatingNav";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -115,7 +114,6 @@ const Order = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
       <FloatingNav />
       <FloatingWhatsApp />
 
