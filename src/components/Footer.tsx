@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Instagram, MessageCircle } from "lucide-react";
+import metsiLogo from "@/assets/metsi-logo.png";
 
 const Footer = () => {
   return (
@@ -16,12 +17,7 @@ const Footer = () => {
           {/* Left - Brand */}
           <div>
             <Link to="/" className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full border-2 border-background flex items-center justify-center text-xs font-bold">
-                M
-              </div>
-              <span className="text-2xl font-bold tracking-tight">
-                Metsi<span className="text-primary">012</span>
-              </span>
+              <img src={metsiLogo} alt="Metsi 012" className="h-10 w-auto" />
             </Link>
             <p className="text-sm text-background/60 font-light">
               Premium water from Pretoria, South Africa
