@@ -97,14 +97,14 @@ const Index = () => {
               >
                 <Link 
                   to="/order" 
-                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-medium hover:bg-primary/90 transition-colors"
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-[10px] font-medium hover:bg-primary/90 transition-colors"
                 >
                   Order Now
                   <ArrowRight size={18} />
                 </Link>
                 <Link 
                   to="/products" 
-                  className="inline-flex items-center gap-2 border-2 border-foreground text-foreground px-8 py-4 rounded-full font-medium hover:bg-foreground hover:text-background transition-colors"
+                  className="inline-flex items-center gap-2 border-2 border-foreground text-foreground px-8 py-4 rounded-[10px] font-medium hover:bg-foreground hover:text-background transition-colors"
                 >
                   View Products
                 </Link>
@@ -284,7 +284,7 @@ const Index = () => {
           >
             <Link 
               to="/order" 
-              className="inline-flex items-center gap-2 bg-background text-foreground px-8 py-4 rounded-full font-medium hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 bg-background text-foreground px-8 py-4 rounded-[10px] font-medium hover:opacity-90 transition-opacity"
             >
               Order Now
               <ArrowRight size={18} />

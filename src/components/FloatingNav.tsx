@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Home, Phone, ShoppingCart, Package } from "lucide-react";
+import { Phone, ShoppingCart, Package } from "lucide-react";
 import { cn } from "@/lib/utils";
 import metsiLogo from "@/assets/metsi-logo.png";
 
@@ -8,7 +8,6 @@ const FloatingNav = () => {
   const location = useLocation();
 
   const navItems = [
-    { name: "Home", link: "/", icon: <Home size={18} /> },
     { name: "Products", link: "/products", icon: <Package size={18} /> },
     { name: "Contact", link: "/contact", icon: <Phone size={18} /> },
     { name: "Order", link: "/order", icon: <ShoppingCart size={18} /> },
@@ -27,9 +26,9 @@ const FloatingNav = () => {
         "z-[100] px-3 py-2 items-center justify-center gap-1"
       )}
     >
-      {/* Logo */}
-      <Link to="/" className="mr-4">
-        <img src={metsiLogo} alt="Metsi 012" className="h-8 w-auto" />
+      {/* Logo as Home Link */}
+      <Link to="/" className="mr-4 hover:opacity-80 transition-opacity">
+        <img src={metsiLogo} alt="Metsi 012" className="h-12 w-auto" />
       </Link>
 
       {navItems.map((navItem, idx) => (
@@ -48,7 +47,7 @@ const FloatingNav = () => {
       ))}
       <Link
         to="/order"
-        className="border border-border text-sm font-medium relative text-foreground px-4 py-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors ml-2"
+        className="border border-border text-sm font-medium relative text-foreground px-4 py-2 rounded-[10px] bg-primary text-primary-foreground hover:bg-primary/90 transition-colors ml-2"
       >
         <span>Order Now</span>
         <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-accent to-transparent h-px" />

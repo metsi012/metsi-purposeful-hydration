@@ -146,27 +146,28 @@ const Products = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -8 }}
-                className="bg-card border border-border p-6 rounded-lg group cursor-pointer"
+                whileHover={{ y: -6, boxShadow: "0 20px 40px -15px rgba(0,0,0,0.1)" }}
+                className="bg-card border border-border/50 p-8 rounded-[10px] group cursor-pointer transition-all duration-300"
               >
-                <div className="aspect-square bg-secondary rounded-lg mb-6 flex items-center justify-center overflow-hidden">
+                <div className="aspect-[4/3] bg-gradient-to-b from-secondary to-muted/30 rounded-[10px] mb-6 flex items-center justify-center overflow-hidden">
                   <motion.img
                     src={product.image}
                     alt={product.name}
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                    className="w-auto h-4/5 object-contain"
+                    whileHover={{ scale: 1.08 }}
+                    transition={{ duration: 0.4 }}
+                    className="w-auto h-3/4 object-contain drop-shadow-lg"
                   />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+                <span className="text-xs uppercase tracking-[0.2em] text-primary font-medium mb-2 block">Still Water</span>
+                <h3 className="text-lg font-semibold mb-1">{product.name}</h3>
                 <p className="text-muted-foreground text-sm mb-4">{product.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-primary">R{product.price}</span>
+                <div className="flex items-center justify-between pt-4 border-t border-border/50">
+                  <span className="text-2xl font-bold text-foreground">R{product.price}</span>
                   <Link
                     to="/order"
-                    className="text-sm font-medium text-primary hover:underline"
+                    className="text-sm font-medium bg-primary text-primary-foreground px-4 py-2 rounded-[10px] hover:bg-primary/90 transition-colors"
                   >
-                    Order Now →
+                    Order Now
                   </Link>
                 </div>
               </motion.div>
@@ -197,27 +198,28 @@ const Products = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -8 }}
-                className="bg-card border border-border p-6 rounded-lg group cursor-pointer"
+                whileHover={{ y: -6, boxShadow: "0 20px 40px -15px rgba(0,0,0,0.1)" }}
+                className="bg-card border border-border/50 p-8 rounded-[10px] group cursor-pointer transition-all duration-300"
               >
-                <div className="aspect-square bg-background rounded-lg mb-6 flex items-center justify-center overflow-hidden">
+                <div className="aspect-[4/3] bg-gradient-to-b from-background to-secondary/30 rounded-[10px] mb-6 flex items-center justify-center overflow-hidden">
                   <motion.img
                     src={product.image}
                     alt={product.name}
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                    className="w-auto h-4/5 object-contain"
+                    whileHover={{ scale: 1.08 }}
+                    transition={{ duration: 0.4 }}
+                    className="w-auto h-3/4 object-contain drop-shadow-lg"
                   />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+                <span className="text-xs uppercase tracking-[0.2em] text-primary font-medium mb-2 block">Sparkling</span>
+                <h3 className="text-lg font-semibold mb-1">{product.name}</h3>
                 <p className="text-muted-foreground text-sm mb-4">{product.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-primary">R{product.price}</span>
+                <div className="flex items-center justify-between pt-4 border-t border-border/50">
+                  <span className="text-2xl font-bold text-foreground">R{product.price}</span>
                   <Link
                     to="/order"
-                    className="text-sm font-medium text-primary hover:underline"
+                    className="text-sm font-medium bg-primary text-primary-foreground px-4 py-2 rounded-[10px] hover:bg-primary/90 transition-colors"
                   >
-                    Order Now →
+                    Order Now
                   </Link>
                 </div>
               </motion.div>
@@ -248,27 +250,28 @@ const Products = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -8 }}
-                className="bg-card border border-border p-6 rounded-lg group cursor-pointer"
+                whileHover={{ y: -6, boxShadow: "0 20px 40px -15px rgba(0,0,0,0.1)" }}
+                className="bg-card border border-border/50 p-8 rounded-[10px] group cursor-pointer transition-all duration-300"
               >
-                <div className="aspect-square bg-secondary rounded-lg mb-6 flex items-center justify-center overflow-hidden">
+                <div className="aspect-[4/3] bg-gradient-to-b from-secondary to-muted/30 rounded-[10px] mb-6 flex items-center justify-center overflow-hidden">
                   <motion.img
                     src={product.image}
                     alt={product.name}
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                    className="w-auto h-4/5 object-contain"
+                    whileHover={{ scale: 1.08 }}
+                    transition={{ duration: 0.4 }}
+                    className="w-auto h-3/4 object-contain drop-shadow-lg"
                   />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+                <span className="text-xs uppercase tracking-[0.2em] text-primary font-medium mb-2 block">Accessories</span>
+                <h3 className="text-lg font-semibold mb-1">{product.name}</h3>
                 <p className="text-muted-foreground text-sm mb-4">{product.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-primary">R{product.price}</span>
+                <div className="flex items-center justify-between pt-4 border-t border-border/50">
+                  <span className="text-2xl font-bold text-foreground">R{product.price}</span>
                   <Link
                     to="/order"
-                    className="text-sm font-medium text-primary hover:underline"
+                    className="text-sm font-medium bg-primary text-primary-foreground px-4 py-2 rounded-[10px] hover:bg-primary/90 transition-colors"
                   >
-                    Order Now →
+                    Order Now
                   </Link>
                 </div>
               </motion.div>
@@ -286,7 +289,7 @@ const Products = () => {
           </p>
           <Link
             to="/order"
-            className="inline-block bg-background text-foreground px-8 py-4 rounded-full font-medium hover:opacity-90 transition-opacity"
+            className="inline-block bg-background text-foreground px-8 py-4 rounded-[10px] font-medium hover:opacity-90 transition-opacity"
           >
             Place Your Order
           </Link>
