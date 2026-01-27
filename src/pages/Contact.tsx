@@ -4,7 +4,6 @@ import { Phone, Mail, MapPin, Instagram, MessageCircle, Send } from "lucide-reac
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import Navigation from "@/components/Navigation";
 import FloatingNav from "@/components/FloatingNav";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -61,7 +60,6 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
       <FloatingNav />
       <FloatingWhatsApp />
 

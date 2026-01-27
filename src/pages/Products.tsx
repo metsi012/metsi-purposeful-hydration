@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Navigation from "@/components/Navigation";
 import FloatingNav from "@/components/FloatingNav";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -90,7 +89,6 @@ const Products = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
       <FloatingNav />
       <FloatingWhatsApp />
 
