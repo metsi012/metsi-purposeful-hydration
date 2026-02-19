@@ -5,10 +5,9 @@ import FloatingNav from "@/components/FloatingNav";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import AnimatedSection from "@/components/AnimatedSection";
-import bottle500ml from "@/assets/bottle-500ml.png";
-import bottle5l from "@/assets/bottle-5l.png";
+import bottle500ml from "@/assets/bottle-500ml-new.png";
+import bottle5l from "@/assets/bottle-5l-new.png";
 import bottleSparkling from "@/assets/bottle-sparkling.png";
-import iceBag from "@/assets/ice-bag.png";
 
 interface Product {
   id: string;
@@ -78,7 +77,7 @@ const Products = () => {
       name: "Ice Bag 2KG",
       description: "Keep your drinks cold and refreshing",
       price: 22,
-      image: iceBag,
+      image: "",
       category: "ice",
     },
   ];
@@ -254,13 +253,22 @@ const Products = () => {
                 className="bg-card border border-border/50 p-8 rounded-[10px] group cursor-pointer transition-all duration-300"
               >
                 <div className="aspect-[4/3] bg-gradient-to-b from-secondary to-muted/30 rounded-[10px] mb-6 flex items-center justify-center overflow-hidden">
-                  <motion.img
-                    src={product.image}
-                    alt={product.name}
-                    whileHover={{ scale: 1.08 }}
-                    transition={{ duration: 0.4 }}
-                    className="w-auto h-3/4 object-contain drop-shadow-lg"
-                  />
+                  {product.image ? (
+                    <motion.img
+                      src={product.image}
+                      alt={product.name}
+                      whileHover={{ scale: 1.08 }}
+                      transition={{ duration: 0.4 }}
+                      className="w-auto h-3/4 object-contain drop-shadow-lg"
+                    />
+                  ) : (
+                    <div className="flex flex-col items-center gap-3 text-muted-foreground/40">
+                      <div className="w-20 h-20 rounded-full border-2 border-dashed border-muted-foreground/20 flex items-center justify-center">
+                        <span className="text-3xl">🧊</span>
+                      </div>
+                      <span className="text-xs uppercase tracking-widest">Image coming soon</span>
+                    </div>
+                  )}
                 </div>
                 <span className="text-xs uppercase tracking-[0.2em] text-primary font-medium mb-2 block">Accessories</span>
                 <h3 className="text-lg font-semibold mb-1">{product.name}</h3>

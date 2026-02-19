@@ -34,8 +34,8 @@ const Contact = () => {
   });
 
   const contacts = [
-    { name: "Lebogang Mampho", phone: "065 978 8701" },
     { name: "Fhulufhelo Tambani", phone: "060 706 8221" },
+    { name: "Lebogang Mampho", phone: "065 978 8701" },
   ];
 
   const onSubmit = (data: ContactFormData) => {
