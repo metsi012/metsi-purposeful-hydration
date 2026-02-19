@@ -85,7 +85,7 @@ const Index = () => {
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="text-lg text-muted-foreground font-light mb-8 max-w-md leading-relaxed">
 
-                'A Monate Metsi 012 — Stay Hydrated and Drink Metsi. Pure, refreshing water from the heart of Pretoria.
+                Metsi' A Monate  — Stay Hydrated and Drink Metsi. Pure, refreshing water from the heart of Pretoria.
               </motion.p>
 
               <motion.div
