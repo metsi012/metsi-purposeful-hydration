@@ -118,7 +118,7 @@ const Order = () => {
       <FloatingWhatsApp />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-secondary">
+      <section className="pt-20 sm:pt-32 pb-12 sm:pb-16 bg-secondary">
         <div className="container-premium">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -132,7 +132,7 @@ const Order = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-7xl font-bold text-foreground tracking-tight"
+            className="text-3xl sm:text-4xl md:text-7xl font-bold text-foreground tracking-tight"
           >
             Order Now
           </motion.h1>
@@ -142,9 +142,9 @@ const Order = () => {
       {/* Products Selection */}
       <AnimatedSection className="section-padding pt-8">
         <div className="container-premium">
-          <h2 className="text-2xl font-bold mb-8">Select Products</h2>
+          <h2 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8">Select Products</h2>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
             {products.map((product, index) => {
               const cartItem = cart.find((item) => item.id === product.id);
               return (
@@ -204,9 +204,9 @@ const Order = () => {
       </AnimatedSection>
 
       {/* Order Form */}
-      <AnimatedSection className="py-24 bg-secondary">
+      <AnimatedSection className="py-16 sm:py-24 bg-secondary">
         <div className="container-premium">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Cart Summary */}
             <div>
               <h2 className="text-2xl font-bold mb-8 flex items-center gap-3">
@@ -217,34 +217,34 @@ const Order = () => {
               {cart.length === 0 ? (
                 <p className="text-muted-foreground">Your cart is empty. Add products above.</p>
               ) : (
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   {cart.map((item) => (
                     <div
                       key={item.id}
-                      className="flex items-center justify-between bg-background p-4"
+                      className="flex items-center justify-between bg-background p-3 sm:p-4 gap-2"
                     >
-                      <div className="flex items-center gap-4">
+                      <div className="flex items-center gap-2 sm:gap-4 min-w-0">
                         <img
                           src={item.image}
                           alt={item.name}
-                          className="w-12 h-12 object-contain"
+                          className="w-10 h-10 sm:w-12 sm:h-12 object-contain flex-shrink-0"
                         />
-                        <div>
-                          <p className="font-medium">{item.name}</p>
-                          <p className="text-sm text-muted-foreground">
+                        <div className="min-w-0">
+                          <p className="font-medium text-sm sm:text-base truncate">{item.name}</p>
+                          <p className="text-xs sm:text-sm text-muted-foreground">
                             R{item.price} × {item.quantity}
                           </p>
                         </div>
                       </div>
-                      <div className="flex items-center gap-4">
-                        <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
+                        <div className="flex items-center gap-1 sm:gap-2">
                           <button
                             onClick={() => updateQuantity(item.id, -1)}
                             className="p-1 hover:bg-secondary transition-colors"
                           >
                             <Minus size={14} />
                           </button>
-                          <span className="w-8 text-center">{item.quantity}</span>
+                          <span className="w-6 sm:w-8 text-center text-sm">{item.quantity}</span>
                           <button
                             onClick={() => updateQuantity(item.id, 1)}
                             className="p-1 hover:bg-secondary transition-colors"
@@ -252,7 +252,7 @@ const Order = () => {
                             <Plus size={14} />
                           </button>
                         </div>
-                        <p className="font-semibold w-20 text-right">
+                        <p className="font-semibold text-sm sm:text-base w-16 sm:w-20 text-right">
                           R{item.price * item.quantity}
                         </p>
                       </div>
@@ -334,25 +334,25 @@ const Order = () => {
       </AnimatedSection>
 
       {/* Contact Info */}
-      <AnimatedSection className="py-24">
+      <AnimatedSection className="py-16 sm:py-24">
         <div className="container-premium">
           <div className="max-w-3xl">
-            <h2 className="text-2xl font-bold mb-8">Contact for Orders</h2>
+            <h2 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8">Contact for Orders</h2>
             
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-2">Lebogang Mampho</p>
-                <a href="tel:0659788701" className="text-xl font-light hover:underline">065 978 8701</a>
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
               <div>
                 <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-2">Fhulufhelo Tambani</p>
-                <a href="tel:0607068221" className="text-xl font-light hover:underline">060 706 8221</a>
+                <a href="tel:0607068221" className="text-lg sm:text-xl font-light hover:underline">060 706 8221</a>
+              </div>
+              <div>
+                <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-2">Lebogang Mampho</p>
+                <a href="tel:0659788701" className="text-lg sm:text-xl font-light hover:underline">065 978 8701</a>
               </div>
             </div>
 
-            <div className="mt-8 pt-8 border-t border-border">
+            <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-border">
               <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-2">Email</p>
-              <a href="mailto:Metsi012pta@gmail.com" className="text-xl font-light hover:underline">Metsi012pta@gmail.com</a>
+              <a href="mailto:Metsi012pta@gmail.com" className="text-lg sm:text-xl font-light hover:underline break-all">Metsi012pta@gmail.com</a>
             </div>
           </div>
         </div>

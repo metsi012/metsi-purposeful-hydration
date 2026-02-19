@@ -92,7 +92,7 @@ const Products = () => {
       <FloatingWhatsApp />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-secondary">
+      <section className="pt-20 sm:pt-32 pb-12 sm:pb-16 bg-secondary">
         <div className="container-premium">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -106,7 +106,7 @@ const Products = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-7xl font-bold text-foreground tracking-tight mb-6"
+            className="text-3xl sm:text-4xl md:text-7xl font-bold text-foreground tracking-tight mb-4 sm:mb-6"
           >
             Premium Water
             <br />
@@ -116,7 +116,7 @@ const Products = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg text-muted-foreground max-w-xl"
+            className="text-base sm:text-lg text-muted-foreground max-w-xl"
           >
             Pure, refreshing water from the heart of Pretoria. Available in still and sparkling varieties.
           </motion.p>

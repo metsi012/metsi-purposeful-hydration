@@ -64,7 +64,7 @@ const Contact = () => {
       <FloatingWhatsApp />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-secondary">
+      <section className="pt-20 sm:pt-32 pb-12 sm:pb-16 bg-secondary">
         <div className="container-premium">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -78,7 +78,7 @@ const Contact = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-7xl font-bold text-foreground tracking-tight"
+            className="text-3xl sm:text-4xl md:text-7xl font-bold text-foreground tracking-tight"
           >
             Contact Us
           </motion.h1>
@@ -86,9 +86,9 @@ const Contact = () => {
       </section>
 
       {/* Contact Form Section */}
-      <AnimatedSection className="section-padding pt-12">
+      <AnimatedSection className="section-padding pt-8 sm:pt-12">
         <div className="container-premium">
-          <div className="grid lg:grid-cols-2 gap-16">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
             {/* Left - Contact Form */}
             <div>
               <h2 className="text-2xl font-bold mb-8">Send us a Message</h2>
@@ -189,7 +189,7 @@ const Contact = () => {
                   </div>
                   <a
                     href={`tel:${contact.phone.replace(/\s/g, "")}`}
-                    className="text-2xl md:text-3xl font-light text-muted-foreground hover:text-foreground transition-colors ml-8"
+                    className="text-xl sm:text-2xl md:text-3xl font-light text-muted-foreground hover:text-foreground transition-colors ml-8 break-all"
                   >
                     {contact.phone}
                   </a>
