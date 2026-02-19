@@ -8,10 +8,9 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import Marquee from "@/components/Marquee";
 import ProductCard from "@/components/ProductCard";
 import AnimatedSection from "@/components/AnimatedSection";
-import bottle500ml from "@/assets/bottle-500ml.png";
-import bottle5l from "@/assets/bottle-5l.png";
+import bottle500ml from "@/assets/bottle-500ml-new.png";
+import bottle5l from "@/assets/bottle-5l-new.png";
 import bottleSparkling from "@/assets/bottle-sparkling.png";
-import iceBag from "@/assets/ice-bag.png";
 
 const Index = () => {
   useEffect(() => {
@@ -234,7 +233,6 @@ const Index = () => {
                 name="Ice Bag 2KG"
                 price="R22"
                 size="small"
-                image={iceBag}
                 index={1}
               />
             </div>
