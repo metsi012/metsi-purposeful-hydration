@@ -70,7 +70,7 @@ const Products = () => {
       name: "500ML Sparkling",
       description: "Refreshing bubbles for any occasion",
       price: 10,
-      image: bottleSparkling,
+      image: "",
       category: "sparkling",
     },
     {
