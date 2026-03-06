@@ -8,6 +8,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import bottle500ml from "@/assets/bottle-500ml-new.png";
 import bottle5l from "@/assets/bottle-5l-new.png";
 import bottleSparkling from "@/assets/bottle-sparkling.png";
+import iceBag from "@/assets/ice-bag.png";
 
 interface Product {
   id: string;
