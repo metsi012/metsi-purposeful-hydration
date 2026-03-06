@@ -46,8 +46,8 @@ const Order = () => {
     { id: "24x500ml", name: "24 × 500ML Still", price: 204, image: bottle500ml },
     { id: "1x5l", name: "1 × 5L Still", price: 25, image: bottle5l },
     { id: "2x5l", name: "2 × 5L Still", price: 45, image: bottle5l },
-    { id: "sparkling", name: "500ML Sparkling", price: 10, image: bottleSparkling },
-    { id: "ice", name: "Ice Bag 2KG", price: 22, image: iceBag },
+    { id: "sparkling", name: "500ML Sparkling", price: 10, image: "" },
+    { id: "ice", name: "Ice Bag 2KG", price: 22, image: "" },
   ];
 
   const [cart, setCart] = useState<CartItem[]>([]);
