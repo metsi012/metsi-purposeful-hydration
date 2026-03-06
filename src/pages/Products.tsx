@@ -78,7 +78,7 @@ const Products = () => {
       name: "Ice Bag 2KG",
       description: "Keep your drinks cold and refreshing",
       price: 22,
-      image: "",
+      image: iceBag,
       category: "ice",
     },
   ];
