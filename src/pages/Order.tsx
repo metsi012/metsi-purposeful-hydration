@@ -46,8 +46,8 @@ const Order = () => {
     { id: "24x500ml", name: "24 × 500ML Still", price: 204, image: bottle500ml },
     { id: "1x5l", name: "1 × 5L Still", price: 25, image: bottle5l },
     { id: "2x5l", name: "2 × 5L Still", price: 45, image: bottle5l },
-    { id: "sparkling", name: "500ML Sparkling", price: 10, image: bottleSparkling },
-    { id: "ice", name: "Ice Bag 2KG", price: 22, image: iceBag },
+    { id: "sparkling", name: "500ML Sparkling", price: 10, image: "" },
+    { id: "ice", name: "Ice Bag 2KG", price: 22, image: "" },
   ];
 
   const [cart, setCart] = useState<CartItem[]>([]);
@@ -157,11 +157,18 @@ const Order = () => {
                   className="bg-secondary p-4 relative group"
                 >
                   <div className="aspect-square bg-background mb-4 flex items-center justify-center">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="w-auto h-3/4 object-contain"
-                    />
+                    {product.image ? (
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-auto h-3/4 object-contain"
+                      />
+                    ) : (
+                      <div className="flex flex-col items-center gap-2 text-muted-foreground/40">
+                        <span className="text-2xl">📦</span>
+                        <span className="text-[10px] uppercase tracking-widest">Coming soon</span>
+                      </div>
+                    )}
                   </div>
                   <p className="text-sm font-light mb-1">{product.name}</p>
                   <p className="text-lg font-semibold mb-3">R{product.price}</p>
