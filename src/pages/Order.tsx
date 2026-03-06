@@ -13,8 +13,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
-import bottle500ml from "@/assets/bottle-500ml.png";
-import bottle5l from "@/assets/bottle-5l.png";
+import bottle500ml from "@/assets/bottle-500ml-new.png";
+import bottle5l from "@/assets/bottle-5l-new.png";
 import bottleSparkling from "@/assets/bottle-sparkling.png";
 import iceBag from "@/assets/ice-bag.png";
 
