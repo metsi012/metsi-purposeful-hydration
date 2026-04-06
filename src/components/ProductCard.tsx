@@ -39,8 +39,11 @@ const ProductCard = ({ name, price, size = "medium", image, index }: ProductCard
             initial={{ scale: 0.9 }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.4 }}
-            className="w-1/2 h-3/4 bg-gradient-to-b from-foreground/5 to-foreground/10 rounded-t-full"
-          />
+            className="flex flex-col items-center justify-center gap-2"
+          >
+            <span className="text-3xl">📦</span>
+            <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Coming soon</span>
+          </motion.div>
         )}
       </div>
       <div className="flex justify-between items-center pt-4">

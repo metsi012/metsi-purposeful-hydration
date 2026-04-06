@@ -10,7 +10,7 @@ import ProductCard from "@/components/ProductCard";
 import AnimatedSection from "@/components/AnimatedSection";
 import bottle500ml from "@/assets/bottle-500ml-new.png";
 import bottle5l from "@/assets/bottle-5l-new.png";
-import bottleSparkling from "@/assets/bottle-sparkling.png";
+
 
 const Index = () => {
   useEffect(() => {
@@ -225,7 +225,6 @@ const Index = () => {
                 name="500ML Sparkling"
                 price="R10"
                 size="small"
-                image={bottleSparkling}
                 index={0}
               />
               <ProductCard
