@@ -82,7 +82,7 @@ const Footer = () => {
             <p className="text-xs text-muted-foreground">
               Built by{" "}
               <a
-                href="https://architeqwebagency.pages.dev/"
+                href="https://architeq.co.za"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:underline"
