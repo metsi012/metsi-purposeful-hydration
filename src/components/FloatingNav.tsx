@@ -51,7 +51,7 @@ const FloatingNav = () => {
           </Link>
         ))}
         <Link
-          to="/order"
+          to="/products"
           className="border border-border text-sm font-medium relative text-foreground px-4 py-2 rounded-[10px] bg-primary text-primary-foreground hover:bg-primary/90 transition-colors ml-2"
         >
           <span>Order Now</span>
@@ -106,7 +106,7 @@ const FloatingNav = () => {
                   </Link>
                 ))}
                 <Link
-                  to="/order"
+                  to="/products"
                   onClick={() => setMobileOpen(false)}
                   className="mt-2 flex items-center justify-center gap-2 bg-primary text-primary-foreground px-4 py-3 rounded-[10px] text-sm font-medium hover:bg-primary/90 transition-colors"
                 >

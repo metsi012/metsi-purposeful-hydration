@@ -94,7 +94,7 @@ const Index = () => {
                 className="flex flex-wrap gap-4 justify-center lg:justify-start"
               >
                 <Link
-                  to="/order"
+                  to="/products"
                   className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-[10px] font-medium hover:bg-primary/90 transition-colors text-sm sm:text-base"
                 >
                   Order Now
@@ -280,7 +280,7 @@ const Index = () => {
             viewport={{ once: true }}
           >
             <Link
-              to="/order"
+              to="/products"
               className="inline-flex items-center gap-2 bg-background text-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-[10px] font-medium hover:opacity-90 transition-opacity text-sm sm:text-base"
             >
               Order Now
