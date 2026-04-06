@@ -13,7 +13,6 @@ const FloatingNav = () => {
     { name: "Home", link: "/", icon: <Home size={18} /> },
     { name: "Products", link: "/products", icon: <Package size={18} /> },
     { name: "Contact", link: "/contact", icon: <Phone size={18} /> },
-    { name: "Order", link: "/order", icon: <ShoppingCart size={18} /> },
   ];
 
   return (
@@ -24,11 +23,11 @@ const FloatingNav = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.4 }}
         className={cn(
-          "hidden sm:flex fixed top-4 inset-x-0 mx-auto w-fit",
+          "hidden sm:flex fixed top-4 inset-x-0 mx-auto w-full max-w-2xl",
           "border border-border/50 rounded-full",
           "bg-background/95 backdrop-blur-md",
           "shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]",
-          "z-[100] px-3 py-2 items-center justify-center gap-1"
+          "z-[100] px-6 py-2 items-center justify-between gap-2"
         )}
       >
         {/* Logo as Home Link */}
